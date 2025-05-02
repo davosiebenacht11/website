@@ -3,74 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IT & Retro Solutions</title>
+  <title>IT & Retro Services</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            dark: "#0f172a",
-            neon: "#00ffff",
-            accent: "#38bdf8",
+            primary: "#2563eb",
+            lightGray: "#f9fafb",
+            darkText: "#1f2937"
           },
           fontFamily: {
-            futuristic: ["'Orbitron'", "sans-serif"],
+            sans: ["Inter", "sans-serif"]
           }
         }
       }
     };
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     .tab-content { display: none; }
     .tab-content.active { display: block; }
   </style>
 </head>
-<body class="bg-dark text-white font-futuristic min-h-screen">
+<body class="bg-white text-darkText font-sans antialiased">
 
   <!-- Header -->
-  <header class="text-center py-8 border-b border-accent">
-    <h1 class="text-4xl text-neon font-bold tracking-wider">IT & Retro Solutions</h1>
-    <p class="text-gray-400 mt-2">Technik. Service. Nostalgie.</p>
+  <header class="text-center py-8 border-b border-gray-200">
+    <h1 class="text-3xl font-semibold tracking-tight">IT & Retro Services</h1>
+    <p class="text-gray-500 mt-1">Techniklösungen. Support. Retro-Feeling.</p>
   </header>
 
   <!-- Navigation -->
-  <nav class="flex justify-center mt-6 mb-10 space-x-6 text-accent text-lg">
-    <button onclick="switchTab('home')" class="hover:text-neon transition">Start</button>
-    <button onclick="switchTab('shop')" class="hover:text-neon transition">Shop</button>
-    <button onclick="switchTab('info')" class="hover:text-neon transition">Info</button>
-    <button onclick="switchTab('kontakt')" class="hover:text-neon transition">Kontakt</button>
-    <button onclick="switchTab('impressum')" class="hover:text-neon transition">Impressum</button>
+  <nav class="flex justify-center mt-6 mb-10 gap-6 text-gray-600 text-base">
+    <button onclick="switchTab('home')" class="hover:text-primary transition">Start</button>
+    <button onclick="switchTab('shop')" class="hover:text-primary transition">Shop</button>
+    <button onclick="switchTab('info')" class="hover:text-primary transition">Info</button>
+    <button onclick="switchTab('kontakt')" class="hover:text-primary transition">Kontakt</button>
+    <button onclick="switchTab('impressum')" class="hover:text-primary transition">Impressum</button>
   </nav>
 
   <!-- Inhalt -->
-  <main class="px-4 md:px-16">
+  <main class="px-4 md:px-16 max-w-6xl mx-auto">
 
     <!-- Startseite -->
     <section id="home" class="tab-content active">
-      <h2 class="text-center text-3xl font-bold mb-8">Was wir bieten</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <h2 class="text-2xl font-semibold mb-6 text-center">Unsere Leistungen</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
         <!-- Block 1 -->
-        <div class="bg-gray-800 rounded-lg p-6 hover:shadow-xl hover:border-neon border border-gray-700 transition">
-          <div class="text-4xl mb-4">🖥️</div>
-          <h3 class="text-xl font-bold mb-2">PC-Bauteile</h3>
-          <p class="text-gray-400">Qualitativ hochwertige Komponenten – von Grafikkarten bis zu Custom-Kühlern.</p>
+        <div class="bg-lightGray rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+          <h3 class="text-lg font-semibold mb-2">PC-Bauteile</h3>
+          <p class="text-sm text-gray-600">Individuell ausgewählte Komponenten – von Grafikkarten bis zu SSDs. Ideal für Aufrüstungen und neue Systeme.</p>
         </div>
 
         <!-- Block 2 -->
-        <div class="bg-gray-800 rounded-lg p-6 hover:shadow-xl hover:border-neon border border-gray-700 transition">
-          <div class="text-4xl mb-4">🛠️</div>
-          <h3 class="text-xl font-bold mb-2">PC-Dienstleistungen</h3>
-          <p class="text-gray-400">IT-Service, Hardwareberatung, Custom Builds und Optimierung vom Profi.</p>
+        <div class="bg-lightGray rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+          <h3 class="text-lg font-semibold mb-2">PC-Dienstleistungen</h3>
+          <p class="text-sm text-gray-600">Support, Einrichtung, Beratung und Performance-Tuning für private und geschäftliche Systeme.</p>
         </div>
 
         <!-- Block 3 -->
-        <div class="bg-gray-800 rounded-lg p-6 hover:shadow-xl hover:border-neon border border-gray-700 transition">
-          <div class="text-4xl mb-4">🎮</div>
-          <h3 class="text-xl font-bold mb-2">Retro-Spiele</h3>
-          <p class="text-gray-400">Alte Klassiker wiederentdecken – Module, Controller & mehr für Nostalgiker.</p>
+        <div class="bg-lightGray rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+          <h3 class="text-lg font-semibold mb-2">Retro-Spiele</h3>
+          <p class="text-sm text-gray-600">Reparatur, Verkauf und Sammlung klassischer Konsolen & Spiele – ideal für Nostalgiker.</p>
         </div>
 
       </div>
@@ -78,50 +75,62 @@
 
     <!-- Shop -->
     <section id="shop" class="tab-content">
-      <h2 class="text-2xl font-bold mb-6">Shop</h2>
-      <p class="text-gray-400 mb-4">Unsere Produkte im Überblick:</p>
+      <h2 class="text-2xl font-semibold mb-6">Shop</h2>
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-gray-800 p-4 rounded border border-gray-700">
-          <h3 class="font-semibold text-lg">RTX 4080</h3>
-          <p class="text-gray-400">High-End GPU für Gamer & Creator.</p>
-          <button class="mt-2 bg-accent px-4 py-2 text-black rounded hover:bg-neon">Kaufen</button>
+        <div class="bg-lightGray p-4 rounded border border-gray-100 shadow-sm">
+          <h3 class="font-medium text-base mb-1">MSI RTX 4070</h3>
+          <p class="text-sm text-gray-600 mb-2">Top-GPU für Gamer & Creator.</p>
+          <button class="text-sm bg-primary text-white px-3 py-1 rounded hover:bg-blue-600 transition">Kaufen</button>
         </div>
-        <div class="bg-gray-800 p-4 rounded border border-gray-700">
-          <h3 class="font-semibold text-lg">SNES Konsole</h3>
-          <p class="text-gray-400">Restauriert & geprüft, echtes Retro-Feeling.</p>
-          <button class="mt-2 bg-accent px-4 py-2 text-black rounded hover:bg-neon">Kaufen</button>
+        <div class="bg-lightGray p-4 rounded border border-gray-100 shadow-sm">
+          <h3 class="font-medium text-base mb-1">Game Boy Color – Gelb</h3>
+          <p class="text-sm text-gray-600 mb-2">Restauriert mit Garantie.</p>
+          <button class="text-sm bg-primary text-white px-3 py-1 rounded hover:bg-blue-600 transition">Kaufen</button>
         </div>
       </div>
     </section>
 
     <!-- Info -->
     <section id="info" class="tab-content">
-      <h2 class="text-2xl font-bold mb-4">Über Uns</h2>
-      <p class="text-gray-400">Wir kombinieren moderne Technik mit nostalgischem Gaming-Flair. Seit 2021 helfen wir unseren Kunden, ihre Technik auf das nächste Level zu bringen – oder zurück in die goldene Ära der Pixelspiele.</p>
+      <h2 class="text-2xl font-semibold mb-4">Über Uns</h2>
+      <p class="text-gray-600 max-w-2xl leading-relaxed">
+        Wir bieten professionelle IT-Dienstleistungen mit Leidenschaft für Technik und Gaming. Ob aktuelle Hardware oder klassische Konsolen – wir vereinen technisches Know-how mit einer Liebe zur Vergangenheit.
+      </p>
     </section>
 
     <!-- Kontakt -->
     <section id="kontakt" class="tab-content">
-      <h2 class="text-2xl font-bold mb-4">Kontakt</h2>
-      <form class="bg-gray-800 p-6 rounded border border-gray-700 max-w-lg">
-        <label class="block mb-2">Name</label>
-        <input type="text" class="w-full p-2 rounded bg-gray-900 border border-gray-600 text-white mb-4" />
-        <label class="block mb-2">Nachricht</label>
-        <textarea class="w-full p-2 rounded bg-gray-900 border border-gray-600 text-white mb-4"></textarea>
-        <button class="bg-accent text-black px-4 py-2 rounded hover:bg-neon">Senden</button>
+      <h2 class="text-2xl font-semibold mb-4">Kontakt</h2>
+      <form class="bg-lightGray p-6 rounded border border-gray-100 max-w-lg shadow-sm space-y-4">
+        <div>
+          <label class="block text-sm text-gray-700 mb-1">Name</label>
+          <input type="text" class="w-full p-2 border border-gray-300 rounded text-sm" />
+        </div>
+        <div>
+          <label class="block text-sm text-gray-700 mb-1">Nachricht</label>
+          <textarea class="w-full p-2 border border-gray-300 rounded text-sm"></textarea>
+        </div>
+        <button class="bg-primary text-white px-4 py-2 text-sm rounded hover:bg-blue-600 transition">Nachricht senden</button>
       </form>
     </section>
 
     <!-- Impressum -->
     <section id="impressum" class="tab-content">
-      <h2 class="text-2xl font-bold mb-4">Impressum</h2>
-      <p class="text-gray-400">Max Mustermann<br>Musterstraße 1<br>12345 Musterstadt<br>Deutschland<br><br>E-Mail: kontakt@example.com</p>
+      <h2 class="text-2xl font-semibold mb-4">Impressum</h2>
+      <p class="text-sm text-gray-600 leading-relaxed">
+        Max Mustermann<br>
+        Musterstraße 1<br>
+        12345 Musterstadt<br>
+        Deutschland<br><br>
+        E-Mail: kontakt@example.com
+      </p>
     </section>
+
   </main>
 
   <!-- Footer -->
-  <footer class="text-center text-sm text-gray-500 mt-12 py-6 border-t border-gray-700">
-    &copy; 2025 IT & Retro Solutions – Alle Rechte vorbehalten.
+  <footer class="text-center text-sm text-gray-400 mt-12 py-6 border-t border-gray-100">
+    &copy; 2025 IT & Retro Services – Alle Rechte vorbehalten.
   </footer>
 
   <script>
