@@ -3,80 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meine Moderne Webseite</title>
+  <title>IT & Retro Solutions</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    function showTab(tabId) {
-      document.querySelectorAll(".tab-content").forEach(el => el.classList.add("hidden"));
-      document.getElementById(tabId).classList.remove("hidden");
-    }
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: "#0f172a",
+            neon: "#00ffff",
+            accent: "#38bdf8",
+          },
+          fontFamily: {
+            futuristic: ["'Orbitron'", "sans-serif"],
+          }
+        }
+      }
+    };
   </script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-dark text-white font-futuristic min-h-screen">
 
-  <!-- Navbar -->
-  <nav class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <div class="text-xl font-bold text-blue-600">Meine Webseite</div>
-      <div class="space-x-4">
-        <button onclick="showTab('home')" class="hover:text-blue-500">Start</button>
-        <button onclick="showTab('shop')" class="hover:text-blue-500">Shop</button>
-        <button onclick="showTab('info')" class="hover:text-blue-500">Info</button>
-        <button onclick="showTab('kontakt')" class="hover:text-blue-500">Kontakt</button>
-        <button onclick="showTab('impressum')" class="hover:text-blue-500">Impressum</button>
-      </div>
-    </div>
+  <!-- Header -->
+  <header class="text-center py-8 border-b border-accent">
+    <h1 class="text-4xl text-neon font-bold tracking-wider">IT & Retro Solutions</h1>
+    <p class="text-gray-400 mt-2">Technik. Service. Nostalgie.</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="flex justify-center mt-6 mb-10 space-x-6 text-accent text-lg">
+    <button onclick="switchTab('home')" class="hover:text-neon transition">Start</button>
+    <button onclick="switchTab('shop')" class="hover:text-neon transition">Shop</button>
+    <button onclick="switchTab('info')" class="hover:text-neon transition">Info</button>
+    <button onclick="switchTab('kontakt')" class="hover:text-neon transition">Kontakt</button>
+    <button onclick="switchTab('impressum')" class="hover:text-neon transition">Impressum</button>
   </nav>
 
-  <!-- Inhalte -->
-  <main class="container mx-auto p-6">
-    <section id="home" class="tab-content">
-      <h1 class="text-3xl font-semibold mb-4">Willkommen auf meiner Webseite</h1>
-      <p>Dies ist eine moderne, responsiv gestaltete Webseite mit mehreren Bereichen für Informationen, einen kleinen Shop und rechtliche Hinweise.</p>
+  <!-- Inhalt -->
+  <main class="px-4 md:px-16">
+
+    <!-- Startseite -->
+    <section id="home" class="tab-content active">
+      <h2 class="text-center text-3xl font-bold mb-8">Was wir bieten</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+
+        <!-- Block 1 -->
+        <div class="bg-gray-800 rounded-lg p-6 hover:shadow-xl hover:border-neon border border-gray-700 transition">
+          <div class="text-4xl mb-4">🖥️</div>
+          <h3 class="text-xl font-bold mb-2">PC-Bauteile</h3>
+          <p class="text-gray-400">Qualitativ hochwertige Komponenten – von Grafikkarten bis zu Custom-Kühlern.</p>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="bg-gray-800 rounded-lg p-6 hover:shadow-xl hover:border-neon border border-gray-700 transition">
+          <div class="text-4xl mb-4">🛠️</div>
+          <h3 class="text-xl font-bold mb-2">PC-Dienstleistungen</h3>
+          <p class="text-gray-400">IT-Service, Hardwareberatung, Custom Builds und Optimierung vom Profi.</p>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="bg-gray-800 rounded-lg p-6 hover:shadow-xl hover:border-neon border border-gray-700 transition">
+          <div class="text-4xl mb-4">🎮</div>
+          <h3 class="text-xl font-bold mb-2">Retro-Spiele</h3>
+          <p class="text-gray-400">Alte Klassiker wiederentdecken – Module, Controller & mehr für Nostalgiker.</p>
+        </div>
+
+      </div>
     </section>
 
-    <section id="shop" class="tab-content hidden">
-      <h2 class="text-2xl font-semibold mb-4">Shop</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="bg-white p-4 rounded shadow-md">
-          <h3 class="font-bold text-lg">Produkt 1</h3>
-          <p class="text-sm">Beschreibung von Produkt 1.</p>
-          <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Kaufen</button>
+    <!-- Shop -->
+    <section id="shop" class="tab-content">
+      <h2 class="text-2xl font-bold mb-6">Shop</h2>
+      <p class="text-gray-400 mb-4">Unsere Produkte im Überblick:</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-800 p-4 rounded border border-gray-700">
+          <h3 class="font-semibold text-lg">RTX 4080</h3>
+          <p class="text-gray-400">High-End GPU für Gamer & Creator.</p>
+          <button class="mt-2 bg-accent px-4 py-2 text-black rounded hover:bg-neon">Kaufen</button>
         </div>
-        <div class="bg-white p-4 rounded shadow-md">
-          <h3 class="font-bold text-lg">Produkt 2</h3>
-          <p class="text-sm">Beschreibung von Produkt 2.</p>
-          <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Kaufen</button>
+        <div class="bg-gray-800 p-4 rounded border border-gray-700">
+          <h3 class="font-semibold text-lg">SNES Konsole</h3>
+          <p class="text-gray-400">Restauriert & geprüft, echtes Retro-Feeling.</p>
+          <button class="mt-2 bg-accent px-4 py-2 text-black rounded hover:bg-neon">Kaufen</button>
         </div>
       </div>
     </section>
 
-    <section id="info" class="tab-content hidden">
-      <h2 class="text-2xl font-semibold mb-4">Info</h2>
-      <p>Hier findest du Informationen über mich, diese Webseite oder mein Projekt.</p>
+    <!-- Info -->
+    <section id="info" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Über Uns</h2>
+      <p class="text-gray-400">Wir kombinieren moderne Technik mit nostalgischem Gaming-Flair. Seit 2021 helfen wir unseren Kunden, ihre Technik auf das nächste Level zu bringen – oder zurück in die goldene Ära der Pixelspiele.</p>
     </section>
 
-    <section id="kontakt" class="tab-content hidden">
-      <h2 class="text-2xl font-semibold mb-4">Kontakt</h2>
-      <form class="bg-white p-6 rounded shadow-md max-w-lg">
+    <!-- Kontakt -->
+    <section id="kontakt" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Kontakt</h2>
+      <form class="bg-gray-800 p-6 rounded border border-gray-700 max-w-lg">
         <label class="block mb-2">Name</label>
-        <input type="text" class="w-full border p-2 mb-4 rounded" />
+        <input type="text" class="w-full p-2 rounded bg-gray-900 border border-gray-600 text-white mb-4" />
         <label class="block mb-2">Nachricht</label>
-        <textarea class="w-full border p-2 mb-4 rounded"></textarea>
-        <button class="bg-green-500 text-white px-4 py-2 rounded">Senden</button>
+        <textarea class="w-full p-2 rounded bg-gray-900 border border-gray-600 text-white mb-4"></textarea>
+        <button class="bg-accent text-black px-4 py-2 rounded hover:bg-neon">Senden</button>
       </form>
     </section>
 
-    <section id="impressum" class="tab-content hidden">
-      <h2 class="text-2xl font-semibold mb-4">Impressum</h2>
-      <p>Angaben gemäß § 5 TMG:</p>
-      <p>Max Mustermann<br />Musterstraße 1<br />12345 Musterstadt</p>
+    <!-- Impressum -->
+    <section id="impressum" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Impressum</h2>
+      <p class="text-gray-400">Max Mustermann<br>Musterstraße 1<br>12345 Musterstadt<br>Deutschland<br><br>E-Mail: kontakt@example.com</p>
     </section>
   </main>
 
-  <footer class="bg-white border-t mt-10 p-4 text-center text-sm text-gray-600">
-    &copy; 2025 Meine Webseite. Alle Rechte vorbehalten.
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 mt-12 py-6 border-t border-gray-700">
+    &copy; 2025 IT & Retro Solutions – Alle Rechte vorbehalten.
   </footer>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
