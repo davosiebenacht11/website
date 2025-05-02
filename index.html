@@ -22,146 +22,43 @@
     };
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
 <body class="bg-white text-darkText font-sans">
 
-  <!-- Header -->
   <header class="text-center py-10 border-b border-gray-200">
     <h1 class="text-4xl font-semibold">IT & Retro Services</h1>
     <p class="text-gray-500 mt-2">Moderne Technik & Retro-Erlebnisse vereint</p>
   </header>
 
-  <!-- Navigation -->
   <nav class="flex justify-center mt-6 mb-10 gap-6 text-gray-600 text-lg">
-    <a href="#home" class="hover:text-primary">Start</a>
-    <a href="#shop" class="hover:text-primary">Shop</a>
-    <a href="#info" class="hover:text-primary">Info</a>
-    <a href="#kontakt" class="hover:text-primary">Kontakt</a>
-    <a href="#impressum" class="hover:text-primary">Impressum</a>
+    <a href="index.html" class="hover:text-primary">Start</a>
+    <a href="shop.html" class="hover:text-primary">Shop</a>
+    <a href="info.html" class="hover:text-primary">Info</a>
+    <a href="kontakt.html" class="hover:text-primary">Kontakt</a>
+    <a href="impressum.html" class="hover:text-primary">Impressum</a>
   </nav>
 
-  <!-- Startseite -->
-  <section id="home" class="max-w-6xl mx-auto px-6 mb-20">
+  <main class="max-w-6xl mx-auto px-6">
     <h2 class="text-3xl font-semibold text-center mb-10">Unsere Bereiche</h2>
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-3 gap-8 text-center">
 
-      <a href="#bauteile" class="block bg-light p-6 rounded-lg shadow hover:shadow-lg transition border border-gray-200 hover:border-primary text-center">
-        <h3 class="text-xl font-semibold mb-2">PC-Bauteile</h3>
+      <a href="bauteile.html" class="block bg-light p-6 rounded-lg shadow hover:shadow-lg transition border border-gray-200 hover:border-primary">
+        <h3 class="text-xl font-semibold mb-2">🖥️ PC-Bauteile</h3>
         <p class="text-gray-600 text-base">Hochwertige Hardware für jede Anforderung.</p>
       </a>
 
-      <a href="#dienstleistungen" class="block bg-light p-6 rounded-lg shadow hover:shadow-lg transition border border-gray-200 hover:border-primary text-center">
-        <h3 class="text-xl font-semibold mb-2">PC-Dienstleistungen</h3>
+      <a href="dienstleistungen.html" class="block bg-light p-6 rounded-lg shadow hover:shadow-lg transition border border-gray-200 hover:border-primary">
+        <h3 class="text-xl font-semibold mb-2">💼 PC-Dienstleistungen</h3>
         <p class="text-gray-600 text-base">Support, Reparatur und Optimierung.</p>
       </a>
 
-      <a href="#retro" class="block bg-light p-6 rounded-lg shadow hover:shadow-lg transition border border-gray-200 hover:border-primary text-center">
-        <h3 class="text-xl font-semibold mb-2">Retro-Spiele</h3>
+      <a href="retro.html" class="block bg-light p-6 rounded-lg shadow hover:shadow-lg transition border border-gray-200 hover:border-primary">
+        <h3 class="text-xl font-semibold mb-2">🕹️ Retro-Spiele</h3>
         <p class="text-gray-600 text-base">Konsolen, Klassiker & Zubehör von früher.</p>
       </a>
 
     </div>
-  </section>
-
-  <!-- Unterbereich: PC-Bauteile -->
-  <section id="bauteile" class="max-w-5xl mx-auto px-6 py-12">
-    <h2 class="text-2xl font-semibold mb-6">🔧 PC-Bauteile</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-light p-5 rounded-lg border border-gray-200 shadow-sm">
-        <h3 class="font-semibold mb-1">Grafikkarten</h3>
-        <p class="text-gray-600 text-sm">Leistungsstarke GPUs für Gaming und Workstations.</p>
-      </div>
-      <div class="bg-light p-5 rounded-lg border border-gray-200 shadow-sm">
-        <h3 class="font-semibold mb-1">SSDs & Speicher</h3>
-        <p class="text-gray-600 text-sm">Schnelle Speicherlösungen für jede Anwendung.</p>
-      </div>
-      <div class="bg-light p-5 rounded-lg border border-gray-200 shadow-sm">
-        <h3 class="font-semibold mb-1">Mainboards</h3>
-        <p class="text-gray-600 text-sm">Kompatible Boards für Intel & AMD Plattformen.</p>
-      </div>
-      <div class="bg-light p-5 rounded-lg border border-gray-200 shadow-sm">
-        <h3 class="font-semibold mb-1">Netzteile & Kühlung</h3>
-        <p class="text-gray-600 text-sm">Stabile Energieversorgung und effiziente Kühlung.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Unterbereich: Dienstleistungen -->
-  <section id="dienstleistungen" class="max-w-5xl mx-auto px-6 py-12">
-    <h2 class="text-2xl font-semibold mb-6">💼 PC-Dienstleistungen</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-light p-5 rounded-lg border border-gray-200 shadow-sm">
-        <h3 class="font-semibold mb-1">Reparaturservice</h3>
-        <p class="text-gray-600 text-sm">Schnelle Fehlerdiagnose und Reparatur.</p>
-      </div>
-      <div class="bg-light p-5 rounded-lg border border-gray-200 shadow-sm">
-        <h3 class="font-semibold mb-1">Systemoptimierung</h3>
-        <p class="text-gray-600 text-sm">Leistungssteigerung durch gezielte Einstellungen.</p>
-      </div>
-      <div class="bg-light p-5 rounded-lg border border-gray-200 shadow-sm">
-        <h3 class="font-semibold mb-1">Datensicherung</h3>
-        <p class="text-gray-600 text-sm">Backup-Konzepte und Datenwiederherstellung.</p>
-      </div>
-      <div class="bg-light p-5 rounded-lg border border-gray-200 shadow-sm">
-        <h3 class="font-semibold mb-1">Vor-Ort-Service</h3>
-        <p class="text-gray-600 text-sm">Wir kommen direkt zu dir nach Hause oder ins Büro.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Unterbereich: Retro-Spiele -->
-  <section id="retro" class="max-w-5xl mx-auto px-6 py-12">
-    <h2 class="text-2xl font-semibold mb-6">🕹️ Retro-Spiele</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-light p-5 rounded-lg border border-gray-200 shadow-sm">
-        <h3 class="font-semibold mb-1">Konsolen-Verkauf</h3>
-        <p class="text-gray-600 text-sm">Restaurierte Geräte mit Garantie.</p>
-      </div>
-      <div class="bg-light p-5 rounded-lg border border-gray-200 shadow-sm">
-        <h3 class="font-semibold mb-1">Spielmodule</h3>
-        <p class="text-gray-600 text-sm">Originale Klassiker für Sammler & Gamer.</p>
-      </div>
-      <div class="bg-light p-5 rounded-lg border border-gray-200 shadow-sm">
-        <h3 class="font-semibold mb-1">Zubehör & Ersatzteile</h3>
-        <p class="text-gray-600 text-sm">Controller, Kabel, Displays u.v.m.</p>
-      </div>
-      <div class="bg-light p-5 rounded-lg border border-gray-200 shadow-sm">
-        <h3 class="font-semibold mb-1">Reparaturservice</h3>
-        <p class="text-gray-600 text-sm">Defekte Konsolen wieder zum Leben erweckt.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Optional: Weitere Sektionen (Platzhalter) -->
-  <section id="shop" class="max-w-4xl mx-auto px-6 py-12">
-    <h2 class="text-2xl font-semibold mb-4">🛒 Shop</h2>
-    <p class="text-gray-600">Bald verfügbar.</p>
-  </section>
-
-  <section id="info" class="max-w-4xl mx-auto px-6 py-12">
-    <h2 class="text-2xl font-semibold mb-4">ℹ️ Info</h2>
-    <p class="text-gray-600">Wir sind ein IT-Service-Unternehmen mit Spezialisierung auf Gaming-Hardware & Retro-Technik.</p>
-  </section>
-
-  <section id="kontakt" class="max-w-4xl mx-auto px-6 py-12">
-    <h2 class="text-2xl font-semibold mb-4">✉️ Kontakt</h2>
-    <p class="text-gray-600">E-Mail: kontakt@deineseite.de</p>
-  </section>
-
-  <section id="impressum" class="max-w-4xl mx-auto px-6 py-12">
-    <h2 class="text-2xl font-semibold mb-4">📄 Impressum</h2>
-    <p class="text-gray-600 text-sm">
-      Max Mustermann<br>
-      Musterstraße 1<br>
-      12345 Musterstadt<br>
-      E-Mail: kontakt@deineseite.de
-    </p>
-  </section>
+  </main>
 
   <footer class="text-center text-sm text-gray-400 mt-16 py-6 border-t border-gray-100">
     &copy; 2025 IT & Retro Services
